@@ -32,20 +32,20 @@ install(EXPORT ${PROJECT_NAME}
 include(CMakePackageConfigHelpers)
 
 write_basic_package_version_file(
-	${CMAKE_CURRENT_BINARY_DIR}/lua_wrapper_config_version.cmake
+	${CMAKE_CURRENT_BINARY_DIR}/lua_wrapperConfigVersion.cmake
 	VERSION patch#${PROJECT_VERSION}
 	COMPATIBILITY AnyNewerVersion 
 )
 
 configure_package_config_file(
-	${CMAKE_CURRENT_SOURCE_DIR}/cmake/lua_wrapper_config.cmake.in
-	${CMAKE_CURRENT_BINARY_DIR}/lua_wrapper_config.cmake
+	${CMAKE_CURRENT_SOURCE_DIR}/cmake/lua_wrapperConfig.cmake.in
+	${CMAKE_CURRENT_BINARY_DIR}/lua_wrapperConfig.cmake
 	INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}
 )
 
 install(FILES
-	${CMAKE_CURRENT_BINARY_DIR}/lua_wrapper_config.cmake
-	${CMAKE_CURRENT_BINARY_DIR}/lua_wrapper_config_version.cmake
+	${CMAKE_CURRENT_BINARY_DIR}/lua_wrapperConfig.cmake
+	${CMAKE_CURRENT_BINARY_DIR}/lua_wrapperConfigVersion.cmake
 	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/lua_wrapper
 )
 
